@@ -1,0 +1,160 @@
+<app-page-header
+    title="View Asset"
+    subtitle="Asset Information Details"
+    [showBackButton]="true"
+    [showButton]="false"
+    (backClick)="goBack()">
+</app-page-header>
+
+<div class="card">
+
+    <!-- General Information -->
+
+    <div class="form-section">
+
+        <h3 class="form-section-title">
+            General Information
+        </h3>
+
+        <div class="view-grid">
+
+            <div class="view-item">
+                <label>Asset Code</label>
+                <span>{{asset.assetCode}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Asset Name</label>
+                <span>{{asset.assetName}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Category</label>
+                <span>{{asset.category}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Asset Type</label>
+                <span>{{asset.assetType}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Brand</label>
+                <span>{{asset.brand}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Model</label>
+                <span>{{asset.model}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Serial Number</label>
+                <span>{{asset.serialNumber}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Status</label>
+                <span>{{asset.status}}</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Purchase Information -->
+
+    <div class="form-section">
+
+        <h3 class="form-section-title">
+            Purchase Information
+        </h3>
+
+        <div class="view-grid">
+
+            <div class="view-item">
+                <label>Vendor</label>
+                <span>{{asset.vendor}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Purchase Date</label>
+                <span>{{asset.purchaseDate}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Purchase Cost</label>
+                <span>{{asset.purchaseCost}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Invoice Number</label>
+                <span>{{asset.invoiceNumber}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Warranty Start</label>
+                <span>{{asset.warrantyStart}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Warranty End</label>
+                <span>{{asset.warrantyEnd}}</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Assignment Information -->
+
+    <div class="form-section">
+
+        <h3 class="form-section-title">
+            Assignment Information
+        </h3>
+
+        <div class="view-grid">
+
+            <div class="view-item">
+                <label>Employee</label>
+                <span>{{asset.employee}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Department</label>
+                <span>{{asset.department}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Location</label>
+                <span>{{asset.location}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Condition</label>
+                <span>{{asset.condition}}</span>
+            </div>
+
+            <div class="view-item">
+                <label>Assigned Date</label>
+                <span>{{asset.assignedDate}}</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Remarks -->
+
+    <div class="form-section">
+
+        <h3 class="form-section-title">
+            Remarks
+        </h3>
+
+        <p>{{asset.remarks}}</p>
+
+    </div>
+
+</div>

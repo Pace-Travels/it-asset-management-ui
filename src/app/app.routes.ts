@@ -36,6 +36,9 @@ export const routes: Routes = [
       },
       {
         path: 'dashboard', loadChildren: () => import('./pages/shared/dashbaord/dasboard.routes').then((m) => m.DASHBOARD_ROUTE),
+      },
+      {
+        path: 'asset-info', loadChildren: () => import('./pages/master/asset-info/assetInfo.routes').then((m) => m.ASSETINFO_ROUTE),
       }
     ]
   },

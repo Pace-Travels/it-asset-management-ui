@@ -1,0 +1,122 @@
+<app-page-header title="Asset Information" buttonText="Add Asset" (buttonClick)="addAsset()">
+</app-page-header>
+
+<app-table-toolbar>(search)="searchAsset($event)"></app-table-toolbar>
+
+<div class="card">
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th>Asset Code</th>
+
+                <th>Asset Name</th>
+
+                <th>Category</th>
+
+                <th>Brand</th>
+
+                <th>Assigned To</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @for(asset of filteredAssets; track asset.assetCode){
+
+            <tr>
+
+                <td>{{asset.assetCode}}</td>
+
+                <td>{{asset.assetName}}</td>
+
+                <td>{{asset.category}}</td>
+
+                <td>{{asset.brand}}</td>
+
+                <td>{{asset.assignedTo}}</td>
+
+                <td>
+
+                    <span class="status" [ngClass]="{
+                            'active':asset.status==='Active',
+                            'repair':asset.status==='Repair',
+                            'scrap':asset.status==='Scrap'
+                        }">
+
+                        {{asset.status}}
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <div class="table-actions">
+
+                        <button class="icon-btn">
+
+                            <i class="pi pi-eye"></i>
+
+                        </button>
+
+                        <button class="icon-btn warning">
+
+                            <i class="pi pi-pencil"></i>
+
+                        </button>
+
+                        <button type="button" class="icon-btn danger" title="Delete" (click)="openDeleteDialog(asset)">
+
+                            <i class="pi pi-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+    @if(filteredAssets.length === 0){
+
+    <app-empty-state></app-empty-state>
+
+    }
+</div>
+
+<app-confirmation-dialog
+
+    [(visible)]="showDeleteDialog"
+
+    [title]="'Delete Asset'"
+
+    [message]="'Are you sure you want to permanently delete'"
+
+    [itemName]="selectedAsset?.assetName"
+
+    [itemCode]="selectedAsset?.assetCode"
+
+    [loading]="isDeleting"
+
+    [confirmButtonText]="'Delete'"
+
+    (confirm)="deleteAsset()"
+
+    (cancel)="closeDeleteDialog()">
+
+</app-confirmation-dialog>

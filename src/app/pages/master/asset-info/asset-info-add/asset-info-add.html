@@ -1,0 +1,281 @@
+<app-page-header title="Add Asset" subtitle="Create New Asset Information" [showButton]="false" [showBackButton]="true"
+    (backClick)="goBack()">
+</app-page-header>
+
+<div class="card">
+
+    <form [formGroup]="assetForm">
+
+        <div class="form-section">
+
+            <h3 class="form-section-title">
+
+                General Information
+
+            </h3>
+
+            <div class="form-grid-4">
+
+                <div class="form-group">
+
+                    <label>
+
+                        Asset Code
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input type="text" formControlName="assetCode" [class.input-error]="isInvalid('assetCode')">
+                    <app-validation-message [control]="assetForm.controls['assetCode']" label="Asset Code">
+                    </app-validation-message>
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Asset Name
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input type="text" formControlName="assetName">
+                    <app-validation-message [control]="assetForm.controls['assetCode']" label="Asset Name">
+                    </app-validation-message>
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Category
+
+                    </label>
+
+                    <select formControlName="category">
+
+                        <option value="">
+
+                            Select Category
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Asset Type
+
+                    </label>
+
+                    <select formControlName="assetType">
+
+                        <option value="">
+
+                            Select Asset Type
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Brand
+
+                    </label>
+
+                    <select formControlName="brand">
+
+                        <option value="">
+
+                            Select Brand
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Model
+
+                    </label>
+
+                    <input type="text" formControlName="model">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Serial Number
+
+                    </label>
+
+                    <input type="text" formControlName="serialNumber">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Status
+
+                    </label>
+
+                    <select formControlName="status">
+
+                        <option>
+
+                            Active
+
+                        </option>
+
+                        <option>
+
+                            Repair
+
+                        </option>
+
+                        <option>
+
+                            Scrap
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-section">
+
+            <h3 class="form-section-title">
+
+                Purchase Information
+
+            </h3>
+
+            <div class="form-grid-4">
+
+                <div class="form-group">
+
+                    <label>
+
+                        Vendor
+
+                    </label>
+
+                    <select formControlName="vendor">
+
+                        <option value="">
+
+                            Select Vendor
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Purchase Date
+
+                    </label>
+
+                    <input type="date" formControlName="purchaseDate">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Purchase Cost
+
+                    </label>
+
+                    <input type="number" formControlName="purchaseCost">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Invoice Number
+
+                    </label>
+
+                    <input type="text" formControlName="invoiceNumber">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Warranty Start
+
+                    </label>
+
+                    <input type="date" formControlName="warrantyStart">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Warranty End
+
+                    </label>
+
+                    <input type="date" formControlName="warrantyEnd">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-actions">
+
+            <button type="button" class="secondary-btn" (click)="goBack()">
+
+                Cancel
+
+            </button>
+
+            <button type="submit" class="primary-btn" [disabled]="assetForm.invalid" (click)="save()">
+
+                Save Asset
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
