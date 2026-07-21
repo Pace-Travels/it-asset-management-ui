@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login';
+import { MainLayout } from './layout/main-layout/main-layout';
+import { authGuard } from './core/guards/auth-guard';
 
 
 export const routes: Routes = [
@@ -17,6 +19,25 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/auth/login/login')
         .then(c => c.LoginComponent)
+  },
+
+  // Layout Routes
+  {
+    path: '',
+    loadComponent: () =>
+      import('./layout/main-layout/main-layout')
+        .then(c => c.MainLayout),
+    canActivate: [authGuard],
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard', loadChildren: () => import('./pages/shared/dashbaord/dasboard.routes').then((m) => m.DASHBOARD_ROUTE),
+      }
+    ]
   },
 
   {

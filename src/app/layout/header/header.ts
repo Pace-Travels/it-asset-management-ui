@@ -1,0 +1,43 @@
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { AuthService } from '../../core/services/auth-service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-header',
+  imports: [CommonModule],
+  templateUrl: './header.html',
+  styleUrl: './header.scss',
+})
+export class Header {
+
+  @Output() toggleSidebar = new EventEmitter<void>();
+
+  private authService = inject(AuthService);
+  private router = inject(Router);
+
+  notificationOpen = false;
+  profileOpen = false;
+
+  toggle() {
+    this.toggleSidebar.emit();
+  }
+
+  toggleNotification() {
+    this.notificationOpen = !this.notificationOpen;
+    this.profileOpen = false;
+  }
+
+  toggleProfile() {
+    this.profileOpen = !this.profileOpen;
+    this.notificationOpen = false;
+  }
+
+  logout(): void {
+
+    this.authService.logout();
+
+    this.router.navigate(['/login']);
+
+  }
+}

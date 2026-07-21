@@ -1,0 +1,45 @@
+<div class="page-header">
+
+    <div class="page-header-left">
+
+        <h2>{{ title }}</h2>
+
+        @if(subtitle){
+            <p>{{ subtitle }}</p>
+        }
+
+    </div>
+
+    <div class="page-header-right">
+
+        @if(showBackButton){
+
+            <button
+                class="back-btn"
+                (click)="onBackClick()">
+
+                <i class="pi pi-arrow-left"></i>
+
+                Back
+
+            </button>
+
+        }
+
+        @if(showButton){
+
+            <button
+                class="primary-btn"
+                (click)="onButtonClick()">
+
+                <i class="pi pi-plus"></i>
+
+                {{ buttonText }}
+
+            </button>
+
+        }
+
+    </div>
+
+</div>

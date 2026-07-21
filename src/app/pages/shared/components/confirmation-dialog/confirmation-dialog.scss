@@ -1,0 +1,95 @@
+:host ::ng-deep .confirmation-dialog {
+
+    .p-dialog {
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+    }
+
+    .p-dialog-header {
+
+        padding: 18px 24px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+    }
+
+    .p-dialog-content {
+
+        padding: 24px;
+
+    }
+
+    .p-dialog-footer {
+
+        padding: 18px 24px;
+
+        border-top: 1px solid #e5e7eb;
+
+        display: flex;
+
+        justify-content: flex-end;
+
+        gap: 12px;
+
+    }
+
+}
+
+.dialog-title-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.dialog-title-wrapper i{
+
+    color:#dc2626;
+
+}
+
+.dialog-body{
+
+    text-align:center;
+
+}
+
+.dialog-message{
+
+    margin:0;
+
+    color:#4b5563;
+
+    line-height:1.7;
+
+}
+
+.dialog-item{
+
+    margin:18px 0;
+
+    font-size:17px;
+
+    color:#111827;
+
+}
+
+.dialog-warning{
+
+    margin:0;
+
+    color:#dc2626;
+
+    font-size:14px;
+
+}

@@ -1,0 +1,155 @@
+<header class="header">
+
+    <div class="header-left">
+
+        <button class="menu-btn" (click)="toggle()">
+
+            <i class="pi pi-bars"></i>
+
+        </button>
+
+        <div class="header-search">
+
+            <i class="pi pi-search"></i>
+
+            <input type="text" placeholder="Search assets, users, vendors..." />
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="notification">
+
+            <button class="header-icon" (click)="toggleNotification()">
+
+                <i class="pi pi-bell"></i>
+
+                <span class="badge">3</span>
+
+            </button>
+
+            @if(notificationOpen){
+
+            <div class="notification-dropdown">
+
+                <div class="dropdown-title">
+
+                    Notifications
+
+                </div>
+
+                <div class="notification-item">
+
+                    ✅ Asset Added Successfully
+
+                </div>
+
+                <div class="notification-item">
+
+                    👤 New User Created
+
+                </div>
+
+                <div class="notification-item">
+
+                    📦 Vendor Updated
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <div class="profile-wrapper">
+
+            <div class="profile" (click)="toggleProfile()">
+
+                <div class="avatar">
+
+                    A
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Admin</strong>
+
+                    <small>Administrator</small>
+
+                </div>
+
+                <i class="pi pi-angle-down"></i>
+
+            </div>
+
+            @if(profileOpen){
+
+            <div class="profile-dropdown">
+
+                <div class="profile-header">
+
+                    <div class="avatar large">
+
+                        A
+
+                    </div>
+
+                    <div>
+
+                        <h4>Admin</h4>
+
+                        <p>admin@company.com</p>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-menu">
+
+                    <a>
+
+                        <i class="pi pi-user"></i>
+
+                        My Profile
+
+                    </a>
+
+                    <a>
+
+                        <i class="pi pi-lock"></i>
+
+                        Change Password
+
+                    </a>
+
+                    <a>
+
+                        <i class="pi pi-cog"></i>
+
+                        Settings
+
+                    </a>
+
+                    <a class="logout" (click)="logout()">
+
+                        <i class="pi pi-sign-out"></i>
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</header>

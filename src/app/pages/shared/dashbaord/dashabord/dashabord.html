@@ -1,0 +1,387 @@
+<div class="dashboard">
+
+    <!-- Header -->
+
+    <section class="dashboard-header">
+
+        <div>
+
+            <h2 class="dashboard-title">
+
+                Dashboard
+
+            </h2>
+
+            <p class="dashboard-subtitle">
+
+                Welcome back,
+
+                <strong>{{userName}}</strong>
+
+            </p>
+
+        </div>
+
+        <div class="dashboard-date">
+
+            {{today | date:'EEEE, dd MMM yyyy'}}
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard Content -->
+
+    <section class="dashboard-content">
+
+        <div class="dashboard-cards">
+
+            @for(card of cards;track card.title){
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <span class="dashboard-card-title">
+
+                        {{card.title}}
+
+                    </span>
+
+                    <div class="dashboard-card-icon" [ngClass]="card.iconClass">
+
+                        <i [class]="card.icon"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="dashboard-card-value">
+
+                    {{card.value}}
+
+                </div>
+
+                <div class="dashboard-card-footer">
+
+                    {{card.footer}}
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+
+        <div class="dashboard-chart-grid">
+
+            <section class="dashboard-widget">
+
+                <div class="dashboard-widget-header">
+
+                    <h4 class="dashboard-widget-title">
+
+                        Action Required
+
+                    </h4>
+
+                </div>
+
+                <div class="dashboard-widget-body">
+
+                    @for(item of reminders; track item.provider){
+
+                    <div class="dashboard-widget-item">
+
+                        <div class="dashboard-widget-icon" [ngClass]="item.class">
+
+                            <i [class]="item.icon"></i>
+
+                        </div>
+
+                        <div class="dashboard-widget-content">
+
+                            <h5>{{item.provider}}</h5>
+
+                            <small>{{item.due}}</small>
+
+                        </div>
+
+                        <span class="reminder-badge">
+                            <i [class]="item.icon"></i>
+                        </span>
+
+                    </div>
+
+                    }
+
+                </div>
+
+                <div class="dashboard-widget-footer">
+
+                    <a class="dashboard-widget-link">
+
+                        View All →
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            <div class="dashboard-chart-card">
+
+                <div class="section-header">
+
+                    <h3>Asset Category</h3>
+
+                </div>
+
+                <p-chart type="bar" [data]="categoryData" [options]="chartOptions">
+
+                </p-chart>
+
+            </div>
+
+        </div>
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h3>
+
+                        Recent Assets
+
+                    </h3>
+
+                    <p class="section-subtitle">
+
+                        Latest asset activities
+
+                    </p>
+
+                </div>
+
+                <button type="button" class="secondary-btn" (click)="viewAllAssets()">
+
+                    <i class="pi pi-arrow-right"></i>
+
+                    View All
+
+                </button>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Asset Code</th>
+
+                            <th>Asset Name</th>
+
+                            <th>Category</th>
+
+                            <th>Status</th>
+
+                            <th width="80">Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        @for(asset of recentAssets; track asset.assetCode){
+
+                        <tr>
+
+                            <td>{{asset.assetCode}}</td>
+
+                            <td>{{asset.assetName}}</td>
+
+                            <td>{{asset.category}}</td>
+
+                            <td>
+
+                                <span class="status" [ngClass]="{
+
+                            'active':asset.status==='Assigned',
+
+                            'available':asset.status==='Available',
+
+                            'repair':asset.status==='Repair',
+
+                            'scrap':asset.status==='Scrap'
+
+                        }">
+
+                                    {{asset.status}}
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="icon-btn" title="View">
+
+                                        <i class="pi pi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <div class="dashboard-info-grid">
+
+            <!-- Warranty -->
+
+            <section class="dashboard-widget">
+
+                <div class="dashboard-widget-header">
+
+                    <h4 class="dashboard-widget-title">
+
+                        Warranty Alerts
+
+                    </h4>
+
+                </div>
+
+                <div class="dashboard-widget-body">
+
+                    @for(item of warrantyAlerts;track item.asset){
+
+                    <div class="dashboard-widget-item">
+
+                        <div class="dashboard-widget-icon" [ngClass]="{
+
+                     'warranty-high':item.daysLeft<=15,
+
+                     'warranty-medium':item.daysLeft>15 && item.daysLeft<=30,
+
+                     'warranty-low':item.daysLeft>30
+
+                     }">
+
+                            <i class="pi pi-shield"></i>
+
+                        </div>
+
+                        <div class="dashboard-widget-content">
+
+                            <h5>{{item.asset}}</h5>
+
+                            <p>{{item.daysLeft}} Days Remaining</p>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+                <div class="dashboard-widget-footer">
+
+                    <a class="dashboard-widget-link">
+
+                        View All →
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Activity -->
+
+            <section class="dashboard-widget">
+
+                <div class="dashboard-widget-header">
+
+                    <h4 class="dashboard-widget-title">
+
+                        Recent Activity
+
+                    </h4>
+
+                </div>
+
+                <div class="dashboard-widget-body">
+
+                    @for(item of recentActivities;track item.title){
+
+                    <div class="dashboard-widget-item">
+
+                        <div class="dashboard-widget-icon" [ngClass]="{
+
+                     'activity-success':item.icon==='pi pi-plus-circle',
+
+                     'activity-primary':item.icon==='pi pi-user-plus',
+
+                     'activity-warning':item.icon==='pi pi-wrench'
+
+                     }">
+
+                            <i [class]="item.icon"></i>
+
+                        </div>
+
+                        <div class="dashboard-widget-content">
+
+                            <h5>{{item.title}}</h5>
+
+                            <p>{{item.description}}</p>
+
+                            <small>{{item.time}}</small>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+                <div class="dashboard-widget-footer">
+
+                    <a class="dashboard-widget-link">
+
+                        View Timeline →
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+</div>

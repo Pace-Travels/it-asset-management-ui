@@ -1,0 +1,167 @@
+<p-dialog
+
+    [(visible)]="visible"
+
+    [modal]="true"
+
+    [closable]="true"
+
+    [draggable]="false"
+
+    [resizable]="false"
+
+    [dismissableMask]="true"
+
+    [style]="{ width: '800px' }"
+
+    styleClass="filter-dialog"
+
+    header="Filter Assets"
+
+    (onHide)="close()">
+
+    <div class="form-grid two-column">
+
+        <!-- Category -->
+
+        <div class="form-group">
+
+            <label>Category</label>
+
+            <p-select
+
+                [options]="categoryList"
+
+                [(ngModel)]="filterModel.category"
+
+                optionLabel="name"
+
+                optionValue="id"
+
+                placeholder="Select Category"
+
+                [filter]="true"
+
+                appendTo="body"
+
+                class="w-100">
+
+            </p-select>
+
+        </div>
+
+        <!-- Brand -->
+
+        <div class="form-group">
+
+            <label>Brand</label>
+
+            <p-select
+
+                [options]="brandList"
+
+                [(ngModel)]="filterModel.brand"
+
+                optionLabel="name"
+
+                optionValue="id"
+
+                placeholder="Select Brand"
+
+                [filter]="true"
+
+                appendTo="body"
+
+                class="w-100">
+
+            </p-select>
+
+        </div>
+
+        <!-- Status -->
+
+        <div class="form-group">
+
+            <label>Status</label>
+
+            <p-select
+
+                [options]="statusList"
+
+                [(ngModel)]="filterModel.status"
+
+                optionLabel="name"
+
+                optionValue="id"
+
+                placeholder="Select Status"
+
+                [filter]="true"
+
+                appendTo="body"
+
+                class="w-100">
+
+            </p-select>
+
+        </div>
+
+        <!-- Assigned -->
+
+        <div class="form-group">
+
+            <label>Assigned To</label>
+
+            <p-select
+
+                [options]="employeeList"
+
+                [(ngModel)]="filterModel.assignedTo"
+
+                optionLabel="name"
+
+                optionValue="id"
+
+                placeholder="Select Employee"
+
+                [filter]="true"
+
+                appendTo="body"
+
+                class="w-100">
+
+            </p-select>
+
+        </div>
+
+    </div>
+
+    <ng-template pTemplate="footer">
+
+        <button
+
+            class="secondary-btn"
+
+            type="button"
+
+            (click)="resetFilter()">
+
+            Reset
+
+        </button>
+
+        <button
+
+            class="primary-btn"
+
+            type="button"
+
+            (click)="applyFilter()">
+
+            Apply Filter
+
+        </button>
+
+    </ng-template>
+
+</p-dialog>

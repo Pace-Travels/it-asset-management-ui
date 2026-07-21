@@ -1,0 +1,13 @@
+@if(showError){
+
+<div class="validation-error">
+
+    @if(control?.errors?.['required']){
+
+        {{label}} is required.
+
+    }
+
+</div>
+
+}

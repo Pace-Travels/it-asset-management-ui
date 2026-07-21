@@ -1,0 +1,95 @@
+<aside class="sidebar" [class.collapsed]="collapsed">
+
+    <!-- Logo -->
+
+    <div class="sidebar-header">
+
+        <div class="logo">
+
+            <img src="https://pacetravels.com/extras/custom/TMX1512291534825461/images/pace_logo1.png" alt="Logo">
+
+        </div>
+
+        @if(!collapsed){
+
+        <div class="company">
+
+            <h2>IT Asset</h2>
+
+            <span>Management</span>
+
+        </div>
+
+        }
+
+    </div>
+
+    <!-- Menu -->
+
+    <div class="sidebar-body">
+
+        <ul class="nav-menu">
+
+            @for(item of menu; track item.label){
+
+            <li class="nav-item">
+
+                <a class="nav-link" (click)="toggle(item)" [class.active]="activeMenu === item.label"
+                    (click)="setActive(item.label); toggle(item)">
+
+                    <i [class]="item.icon"></i>
+
+                    @if(!collapsed){
+
+                    <span>
+
+                        {{item.label}}
+
+                    </span>
+
+                    }
+
+                    @if(item.children && !collapsed){
+
+                    <i class="pi" [class.pi-angle-down]="item.expanded" [class.pi-angle-right]="!item.expanded">
+                    </i>
+
+                    }
+
+                </a>
+                @if(!collapsed){
+                @if(item.children && item.expanded){
+
+                <ul class="sub-menu">
+
+                    @for(child of item.children; track child.label && !collapsed){
+
+                    <li>
+
+                        <a class="sub-link" [class.active]="activeMenu === child.label"
+                            (click)="setActive(child.label)">
+
+                            <i [class]="child.icon"></i>
+
+                            {{ child.label }}
+
+                        </a>
+
+                    </li>
+
+                    }
+
+                </ul>
+
+                }
+                }
+
+            </li>
+
+            }
+
+        </ul>
+
+    </div>
+
+</aside>
