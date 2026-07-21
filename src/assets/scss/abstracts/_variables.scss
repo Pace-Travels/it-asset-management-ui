@@ -1,0 +1,677 @@
+/*==================================================
+=            IT ASSET MANAGEMENT DESIGN SYSTEM
+==================================================*/
+
+/*=========================================
+=               COLORS
+=========================================*/
+
+$primary-color:            #2563EB;
+$primary-hover:            #1D4ED8;
+$primary-light:            #DBEAFE;
+
+$secondary-color:          #64748B;
+$secondary-hover:          #475569;
+
+$success-color:            #16A34A;
+$success-light:            #DCFCE7;
+
+$warning-color:            #F59E0B;
+$warning-light:            #FEF3C7;
+
+$danger-color:             #DC2626;
+$danger-light:             #FEE2E2;
+
+$info-color:               #0EA5E9;
+$info-light:               #E0F2FE;
+
+/*=========================================
+=             NEUTRAL COLORS
+=========================================*/
+
+$white:                    #FFFFFF;
+$black:                    #000000;
+
+$gray-50:                  #F8FAFC;
+$gray-100:                 #F1F5F9;
+$gray-200:                 #E2E8F0;
+$gray-300:                 #CBD5E1;
+$gray-400:                 #94A3B8;
+$gray-500:                 #64748B;
+$gray-600:                 #475569;
+$gray-700:                 #334155;
+$gray-800:                 #1E293B;
+$gray-900:                 #0F172A;
+
+/*=========================================
+=             APPLICATION COLORS
+=========================================*/
+
+$body-bg:                  #F5F7FA;
+
+$header-bg:                #FFFFFF;
+
+$sidebar-bg:               #0F172A;
+
+$footer-bg:                #FFFFFF;
+
+$card-bg:                  #FFFFFF;
+
+$table-bg:                 #FFFFFF;
+
+$form-bg:                  #FFFFFF;
+
+/*=========================================
+=               TEXT
+=========================================*/
+
+$text-primary:             #111827;
+
+$text-secondary:           #6B7280;
+
+$text-muted:               #9CA3AF;
+
+$text-white:               #FFFFFF;
+
+/*=========================================
+=               BORDER
+=========================================*/
+
+$border-color:             #E5E7EB;
+
+$border-light:             #F1F5F9;
+
+$border-dark:              #CBD5E1;
+
+/*=========================================
+=             TYPOGRAPHY
+=========================================*/
+
+$font-family:
+"Inter",
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
+/*=========================================
+=              FONT SIZE
+=========================================*/
+
+$font-xs:                  12px;
+
+$font-sm:                  13px;
+
+$font-md:                  14px;
+
+$font-base:                15px;
+
+$font-lg:                  16px;
+
+$font-xl:                  18px;
+
+$font-2xl:                 22px;
+
+$font-3xl:                 28px;
+
+$font-4xl:                 34px;
+
+/*=========================================
+=             FONT WEIGHT
+=========================================*/
+
+$fw-light:                 300;
+
+$fw-normal:                400;
+
+$fw-medium:                500;
+
+$fw-semibold:              600;
+
+$fw-bold:                  700;
+
+$fw-extra-bold:            800;
+
+/*=========================================
+=             LINE HEIGHT
+=========================================*/
+
+$line-height-sm:           1.2;
+
+$line-height-base:         1.5;
+
+$line-height-lg:           1.8;
+
+/*=========================================
+=             SPACING SCALE
+=========================================*/
+
+$space-0:                  0;
+
+$space-1:                  4px;
+
+$space-2:                  8px;
+
+$space-3:                  12px;
+
+$space-4:                  16px;
+
+$space-5:                  20px;
+
+$space-6:                  24px;
+
+$space-7:                  28px;
+
+$space-8:                  32px;
+
+$space-9:                  36px;
+
+$space-10:                 40px;
+
+$space-12:                 48px;
+
+$space-14:                 56px;
+
+$space-16:                 64px;
+
+$space-20:                 80px;
+
+$space-24:                 96px;
+
+/*=========================================
+=             BORDER RADIUS
+=========================================*/
+
+$radius-none:              0;
+
+$radius-xs:                2px;
+
+$radius-sm:                4px;
+
+$radius-md:                8px;
+
+$radius-lg:                12px;
+
+$radius-xl:                16px;
+
+$radius-2xl:               20px;
+
+$radius-round:             50%;
+
+$radius-pill:              999px;
+
+/*=========================================
+=                 SHADOWS
+=========================================*/
+
+$shadow-xs: 0 1px 2px rgba(15,23,42,.04);
+
+$shadow-sm: 0 2px 6px rgba(15,23,42,.06);
+
+$shadow-md: 0 4px 12px rgba(15,23,42,.08);
+
+$shadow-lg: 0 8px 24px rgba(15,23,42,.12);
+
+$shadow-xl: 0 12px 32px rgba(15,23,42,.16);
+
+/*=========================================
+=             TRANSITIONS
+=========================================*/
+
+$transition-fast:          .15s ease-in-out;
+
+$transition-normal:        .25s ease-in-out;
+
+$transition-slow:          .35s ease-in-out;
+
+/*=========================================
+=               Z INDEX
+=========================================*/
+
+$z-dropdown:               1000;
+
+$z-sticky:                 1020;
+
+$z-fixed:                  1030;
+
+$z-sidebar:                1040;
+
+$z-header:                 1050;
+
+$z-overlay:                1060;
+
+$z-modal:                  1070;
+
+$z-toast:                  1080;
+
+$z-loader:                 1090;
+
+$z-tooltip:                1100;
+
+/*=========================================
+=             SIDEBAR
+=========================================*/
+
+$sidebar-width:            270px;
+
+$sidebar-collapsed-width:  80px;
+
+$sidebar-logo-height:      70px;
+
+$sidebar-footer-height:    55px;
+
+$sidebar-menu-width:       100%;
+
+/*=========================================
+=               HEADER
+=========================================*/
+
+$header-height:            70px;
+
+$header-padding-x:         24px;
+
+$header-padding-y:         0;
+
+$header-icon-size:         42px;
+
+/*=========================================
+=               FOOTER
+=========================================*/
+
+$footer-height:            55px;
+
+/*=========================================
+=             CONTENT AREA
+=========================================*/
+
+$content-padding:          24px;
+
+$content-gap:              24px;
+
+$page-max-width:           100%;
+
+/*=========================================
+=               CARDS
+=========================================*/
+
+$card-padding:             24px;
+
+$card-radius:              $radius-lg;
+
+$card-shadow:              $shadow-sm;
+
+$card-border:              1px solid $border-color;
+
+/*=========================================
+=              CONTAINER
+=========================================*/
+
+$container-fluid:          100%;
+
+$container-padding:        24px;
+
+/*=========================================
+=                 INPUTS
+=========================================*/
+
+$input-height-sm:          34px;
+$input-height:             42px;
+$input-height-lg:          48px;
+
+$input-padding-x:          14px;
+$input-padding-y:          10px;
+
+$input-font-size:          $font-md;
+
+$input-bg:                 $white;
+$input-color:              $text-primary;
+$input-border:             $border-color;
+$input-border-focus:       $primary-color;
+
+$input-placeholder:        $gray-400;
+
+$input-radius:             $radius-md;
+
+/*=========================================
+=                  BUTTONS
+=========================================*/
+
+$btn-height-sm:            34px;
+$btn-height:               42px;
+$btn-height-lg:            48px;
+
+$btn-padding-sm:           0 14px;
+$btn-padding:              0 18px;
+$btn-padding-lg:           0 22px;
+
+$btn-font-size:            $font-md;
+
+$btn-radius:               $radius-md;
+
+$btn-primary-bg:           $primary-color;
+$btn-primary-hover:        $primary-hover;
+
+$btn-success-bg:           $success-color;
+$btn-danger-bg:            $danger-color;
+$btn-warning-bg:           $warning-color;
+
+$btn-text-color:           $white;
+
+/*=========================================
+=                  TABLE
+=========================================*/
+
+$table-header-height:      48px;
+$table-row-height:         48px;
+
+$table-header-bg:          $gray-100;
+$table-row-hover:          #F8FAFC;
+
+$table-border:             $border-color;
+
+$table-radius:             $radius-lg;
+
+/*=========================================
+=                 BADGE
+=========================================*/
+
+$badge-height:             24px;
+
+$badge-radius:             $radius-pill;
+
+$badge-font-size:          $font-xs;
+
+/*=========================================
+=                 AVATAR
+=========================================*/
+
+$avatar-xs:                28px;
+$avatar-sm:                36px;
+$avatar-md:                42px;
+$avatar-lg:                52px;
+$avatar-xl:                64px;
+
+/*=========================================
+=                 ICONS
+=========================================*/
+
+$icon-xs:                  12px;
+$icon-sm:                  14px;
+$icon-md:                  16px;
+$icon-lg:                  20px;
+$icon-xl:                  24px;
+
+/*=========================================
+=              SCROLLBAR
+=========================================*/
+
+$scrollbar-width:          8px;
+
+$scrollbar-thumb:          $gray-400;
+
+$scrollbar-track:          transparent;
+
+/*=========================================
+=                MODAL
+=========================================*/
+
+$modal-width-sm:           420px;
+$modal-width-md:           650px;
+$modal-width-lg:           900px;
+
+$modal-radius:             $radius-xl;
+
+$modal-shadow:             $shadow-lg;
+
+/*=========================================
+=                 TOAST
+=========================================*/
+
+$toast-width:              340px;
+
+$toast-radius:             $radius-lg;
+
+$toast-shadow:             $shadow-lg;
+
+/*=========================================
+=                LOADER
+=========================================*/
+
+$loader-size-sm:           18px;
+$loader-size-md:           28px;
+$loader-size-lg:           42px;
+
+/*=========================================
+=              DASHBOARD
+=========================================*/
+
+$dashboard-card-height:    120px;
+
+$dashboard-chart-height:   340px;
+
+$dashboard-gap:            24px;
+
+/*=========================================
+=              LOGIN PAGE
+=========================================*/
+
+$login-card-width:         430px;
+
+$login-card-radius:        $radius-xl;
+
+$login-card-shadow:        $shadow-lg;
+
+$login-bg:                 linear-gradient(
+                            135deg,
+                            #2563EB,
+                            #1E40AF
+                          );
+
+/*=========================================
+=              BREAKPOINTS
+=========================================*/
+
+$mobile:                   576px;
+
+$tablet:                   768px;
+
+$laptop:                   992px;
+
+$desktop:                  1200px;
+
+$wide-screen:              1400px;
+
+/*=========================================
+=             ANIMATION
+=========================================*/
+
+$animation-fast:           .2s;
+
+$animation-normal:         .3s;
+
+$animation-slow:           .5s;
+
+/*=========================================
+=            BORDER WIDTH
+=========================================*/
+
+$border-thin:              1px;
+
+$border-medium:            2px;
+
+$border-thick:             3px;
+
+/*=========================================
+=               OPACITY
+=========================================*/
+
+$opacity-disabled:         .6;
+
+$opacity-hover:            .85;
+
+/*=========================================
+=            COMMON GAPS
+=========================================*/
+
+$gap-xs:                   4px;
+
+$gap-sm:                   8px;
+
+$gap-md:                   16px;
+
+$gap-lg:                   24px;
+
+$gap-xl:                   32px;
+
+/*=========================================
+=            DRAWER / SIDEBAR
+=========================================*/
+
+$drawer-width:              320px;
+$drawer-shadow:             $shadow-xl;
+$drawer-overlay:            rgba(15, 23, 42, .45);
+
+/*=========================================
+=            DROPDOWN
+=========================================*/
+
+$dropdown-min-width:        220px;
+$dropdown-radius:           $radius-lg;
+$dropdown-shadow:           $shadow-lg;
+$dropdown-padding:          8px;
+
+/*=========================================
+=            TOOLTIP
+=========================================*/
+
+$tooltip-bg:                $gray-900;
+$tooltip-color:             $white;
+$tooltip-radius:            $radius-sm;
+$tooltip-padding:           6px 10px;
+
+/*=========================================
+=            PAGINATION
+=========================================*/
+
+$pagination-size:           38px;
+$pagination-radius:         $radius-md;
+$pagination-gap:            6px;
+
+/*=========================================
+=            SEARCH
+=========================================*/
+
+$search-width:              300px;
+$search-height:             42px;
+
+/*=========================================
+=            STATUS COLORS
+=========================================*/
+
+$status-active:             $success-color;
+$status-inactive:           $danger-color;
+$status-pending:            $warning-color;
+$status-processing:         $info-color;
+
+/*=========================================
+=            CHARTS
+=========================================*/
+
+$chart-height:              350px;
+$chart-card-height:         420px;
+
+/*=========================================
+=            CRUD PAGES
+=========================================*/
+
+$list-header-height:        65px;
+$form-header-height:        65px;
+
+$page-radius:               $radius-lg;
+
+$page-shadow:               $shadow-sm;
+
+/*=========================================
+=            DATATABLE
+=========================================*/
+
+$datatable-header-bg:       $gray-100;
+$datatable-hover:           #F8FAFC;
+$datatable-selected:        #DBEAFE;
+
+/*=========================================
+=            FILE UPLOAD
+=========================================*/
+
+$upload-height:             140px;
+$upload-border-style:       dashed;
+
+/*=========================================
+=            CALENDAR
+=========================================*/
+
+$calendar-width:            320px;
+
+/*=========================================
+=            TIMINGS
+=========================================*/
+
+$fast-animation:            150ms;
+$normal-animation:          250ms;
+$slow-animation:            400ms;
+
+/*=========================================
+=            APP INFO
+=========================================*/
+
+$app-name: "IT Asset Management";
+
+$app-version: "1.0.0";
+
+/*=========================================
+=            DEFAULT SIZES
+=========================================*/
+
+$logo-width:                42px;
+$logo-height:               42px;
+
+$profile-size:              42px;
+
+$notification-size:         42px;
+
+/*=========================================
+=            COMMON LAYOUT
+=========================================*/
+
+$layout-max-width:          1920px;
+
+$content-max-width:         100%;
+
+$content-min-height:        calc(100vh - #{$header-height});
+
+/*=========================================
+=            BORDER COLORS
+=========================================*/
+
+$border-success:            $success-color;
+$border-danger:             $danger-color;
+$border-warning:            $warning-color;
+$border-info:               $info-color;
+
+/*=========================================
+=            HOVER COLORS
+=========================================*/
+
+$hover-light:               rgba(37,99,235,.08);
+$hover-dark:                rgba(255,255,255,.08);
+
+/*=========================================
+=            OVERLAY
+=========================================*/
+
+$overlay-bg:                rgba(15,23,42,.55);
+
+/*=========================================
+=            END OF VARIABLES
+=========================================*/

@@ -1,0 +1,61 @@
+@use "sass:math";
+
+/*=========================================
+=            PX TO REM
+=========================================*/
+
+@function rem($px) {
+
+    @return math.div($px, 16) * 1rem;
+
+}
+
+/*=========================================
+=            PX TO EM
+=========================================*/
+
+@function em($px) {
+
+    @return math.div($px, 16) * 1em;
+
+}
+
+/*=========================================
+=            PERCENTAGE
+=========================================*/
+
+@function percent($value, $total) {
+
+    @return percentage(math.div($value, $total));
+
+}
+
+/*=========================================
+=            STRIP UNIT
+=========================================*/
+
+@function strip-unit($number) {
+
+    @return math.div($number, ($number * 0 + 1));
+
+}
+
+/*=========================================
+=            LINE HEIGHT
+=========================================*/
+
+@function line-height($font-size, $line-height) {
+
+    @return math.div($line-height, $font-size);
+
+}
+
+/*=========================================
+=            Z INDEX
+=========================================*/
+
+@function z($value) {
+
+    @return $value;
+
+}

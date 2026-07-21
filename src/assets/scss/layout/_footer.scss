@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+.footer{
+
+    height:50px;
+
+    background:#fff;
+
+    border-top:1px solid #E2E8F0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 24px;
+
+    color:#64748B;
+
+    font-size:13px;
+
+    padding: 12px 20px;
+
+    border-top: 1px solid $border-color;
+
+    background: $white;
+
+}

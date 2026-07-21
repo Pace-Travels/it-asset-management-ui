@@ -1,0 +1,256 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            BUTTON BASE
+=========================================*/
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: $space-2;
+
+    height: $btn-height;
+
+    padding: $btn-padding;
+
+    border: none;
+
+    border-radius: $btn-radius;
+
+    font-size: $btn-font-size;
+
+    font-weight: $fw-medium;
+
+    cursor: pointer;
+
+    transition: $transition-normal;
+
+    white-space: nowrap;
+
+}
+
+/*=========================================
+=            PRIMARY
+=========================================*/
+
+.btn-primary {
+
+    background: $primary-color;
+
+    color: $white;
+
+}
+
+.btn-primary:hover {
+
+    background: $primary-hover;
+
+}
+
+/*=========================================
+=            SUCCESS
+=========================================*/
+
+.btn-success {
+
+    background: $success-color;
+
+    color: $white;
+
+}
+
+/*=========================================
+=            WARNING
+=========================================*/
+
+.btn-warning {
+
+    background: $warning-color;
+
+    color: $white;
+
+}
+
+/*=========================================
+=            DANGER
+=========================================*/
+
+.btn-danger {
+
+    background: $danger-color;
+
+    color: $white;
+
+}
+
+/*=========================================
+=            OUTLINE
+=========================================*/
+
+.btn-outline {
+
+    background: transparent;
+
+    border: 1px solid $border-color;
+
+    color: $text-primary;
+
+}
+
+/*=========================================
+=            SIZES
+=========================================*/
+
+.btn-sm {
+
+    height: $btn-height-sm;
+
+    font-size: $font-sm;
+
+}
+
+.btn-lg {
+
+    height: $btn-height-lg;
+
+    font-size: $font-lg;
+
+}
+
+.btn-block {
+
+    width: 100%;
+
+}
+
+.icon-btn{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    transition:.25s;
+
+}
+
+.icon-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.icon-btn.warning{
+
+    background:#FEF3C7;
+
+    color:#D97706;
+
+}
+
+.icon-btn.danger{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+.secondary-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-width:110px;
+    height:40px;
+
+    padding:0 18px;
+
+    border:1px solid $border-color;
+    border-radius:$radius-md;
+
+    background:#fff;
+    color:$text-primary;
+
+    cursor:pointer;
+
+    @include transition;
+
+}
+
+.secondary-btn:hover{
+
+    background:#F8FAFC;
+    border-color:#CBD5E1;
+
+}
+
+.back-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    border:none;
+    background:transparent;
+
+    color:$primary-color;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    @include transition;
+
+}
+
+.back-btn:hover{
+
+    color:#1D4ED8;
+
+}
+
+.primary-btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+.danger-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 110px;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid #DC2626;
+  border-radius: 8px;
+  background: #DC2626; /* Danger Red */
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.danger-btn:hover {
+  background: #B91C1C;
+  border-color: #B91C1C;
+}

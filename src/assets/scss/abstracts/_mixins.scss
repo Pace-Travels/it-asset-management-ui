@@ -1,0 +1,193 @@
+@use "./variables" as *;
+
+/*==========================================
+=              FLEX
+==========================================*/
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*==========================================
+=              CARD
+==========================================*/
+
+@mixin card {
+
+    background: $card-bg;
+
+    border-radius: $radius-md;
+
+    box-shadow: $shadow-sm;
+
+    border: 1px solid $border-color;
+
+}
+
+/*==========================================
+=              BUTTON
+==========================================*/
+
+@mixin button-transition {
+
+    transition: $transition-fast;
+
+}
+
+/*==========================================
+=              INPUT
+==========================================*/
+
+@mixin input {
+
+    width: 100%;
+
+    height: $input-height;
+
+    padding: 0 $input-padding-x;
+
+    background: $input-bg;
+
+    color: $input-color;
+
+    border: 1px solid $input-border;
+
+    border-radius: $input-radius;
+
+    font-size: $input-font-size;
+
+    transition: $transition-fast;
+
+    outline: none;
+
+    &:focus {
+
+        border-color: $input-border-focus;
+
+    }
+
+    &::placeholder {
+
+        color: $input-placeholder;
+
+    }
+
+}
+
+/*==========================================
+=              SCROLLBAR
+==========================================*/
+
+@mixin scrollbar {
+
+    &::-webkit-scrollbar {
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+
+        background: #cbd5e1;
+
+        border-radius: 20px;
+
+    }
+
+    &::-webkit-scrollbar-track {
+
+        background: transparent;
+
+    }
+
+}
+
+/*==========================================
+=              ELLIPSIS
+==========================================*/
+
+@mixin ellipsis {
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+/*==========================================
+=              TRANSITION
+==========================================*/
+
+@mixin transition {
+
+    transition: all .25s ease;
+
+}
+
+/*==========================================
+=              RESPONSIVE
+==========================================*/
+
+@mixin mobile {
+
+    @media(max-width:576px) {
+
+        @content;
+
+    }
+
+}
+
+@mixin tablet {
+
+    @media(max-width:768px) {
+
+        @content;
+
+    }
+
+}
+
+@mixin laptop {
+
+    @media(max-width:992px) {
+
+        @content;
+
+    }
+
+}
+
+@mixin desktop {
+
+    @media(max-width:1200px) {
+
+        @content;
+
+    }
+
+}

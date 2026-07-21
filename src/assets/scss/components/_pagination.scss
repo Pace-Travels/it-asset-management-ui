@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            PAGINATION
+=========================================*/
+
+.pagination {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: $pagination-gap;
+
+    margin-top: $space-5;
+
+}
+
+.page-item {
+
+    width: $pagination-size;
+
+    height: $pagination-size;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid $border-color;
+
+    border-radius: $pagination-radius;
+
+    cursor: pointer;
+
+    transition: $transition-fast;
+
+    background: $white;
+
+}
+
+.page-item:hover {
+
+    background: $gray-100;
+
+}
+
+.page-item.active {
+
+    background: $primary-color;
+
+    color: $white;
+
+    border-color: $primary-color;
+
+}

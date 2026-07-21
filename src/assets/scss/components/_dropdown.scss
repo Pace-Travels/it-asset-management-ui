@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            DROPDOWN
+=========================================*/
+
+.dropdown {
+
+    position: relative;
+
+}
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    right: 0;
+
+    min-width: $dropdown-min-width;
+
+    background: $white;
+
+    border: 1px solid $border-color;
+
+    border-radius: $dropdown-radius;
+
+    box-shadow: $dropdown-shadow;
+
+    padding: $dropdown-padding;
+
+    z-index: $z-dropdown;
+
+}
+
+.dropdown-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: $space-3;
+
+    padding: $space-3;
+
+    border-radius: $radius-md;
+
+    cursor: pointer;
+
+    transition: $transition-fast;
+
+}
+
+.dropdown-item:hover {
+
+    background: $gray-100;
+
+}

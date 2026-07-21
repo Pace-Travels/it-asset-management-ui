@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.app-layout {
+
+    display: flex;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: $body-bg;
+
+}   
+
+.main-layout {
+
+    flex: 1;
+
+    margin-left: $sidebar-width;
+
+    width:calc(100% - #{$sidebar-width});
+
+    min-width: 0;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+}
+
+.page-wrapper {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 20px;
+
+    background: $body-bg;
+
+    @include scrollbar;
+
+}
+
+.page-wrapper {
+
+    padding: 20px;
+
+}
+
+.page-wrapper {
+
+    animation: fadeIn .35s ease;
+
+    @include scrollbar;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.sidebar-collapsed{
+
+.sidebar{
+
+    width:80px;
+
+}
+
+.main-layout{
+
+    margin-left:80px;
+
+    width:calc(100% - 80px);
+
+}
+
+}

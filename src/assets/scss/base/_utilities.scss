@@ -1,0 +1,173 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            DISPLAY
+=========================================*/
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+/*=========================================
+=            FLEX
+=========================================*/
+
+.justify-between {
+    justify-content: space-between !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+/*=========================================
+=            TEXT
+=========================================*/
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-success {
+    color: $success-color;
+}
+
+.text-warning {
+    color: $warning-color;
+}
+
+.text-danger {
+    color: $danger-color;
+}
+
+.text-muted {
+    color: $text-secondary;
+}
+
+/*=========================================
+=            BACKGROUND
+=========================================*/
+
+.bg-white {
+    background: $white;
+}
+
+.bg-primary {
+    background: $primary-color;
+}
+
+.bg-success {
+    background: $success-color;
+}
+
+.bg-warning {
+    background: $warning-color;
+}
+
+.bg-danger {
+    background: $danger-color;
+}
+
+/*=========================================
+=            BORDER RADIUS
+=========================================*/
+
+.rounded-sm {
+    border-radius: $radius-sm;
+}
+
+.rounded {
+    border-radius: $radius-md;
+}
+
+.rounded-lg {
+    border-radius: $radius-lg;
+}
+
+.rounded-xl {
+    border-radius: $radius-xl;
+}
+
+/*=========================================
+=            SHADOW
+=========================================*/
+
+.shadow-sm {
+    box-shadow: $shadow-sm;
+}
+
+.shadow {
+    box-shadow: $shadow-md;
+}
+
+.shadow-lg {
+    box-shadow: $shadow-lg;
+}
+
+/*=========================================
+=            WIDTH
+=========================================*/
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+/*=========================================
+=            CURSOR
+=========================================*/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/*=========================================
+=            OVERFLOW
+=========================================*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}

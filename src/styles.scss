@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@use "primeicons/primeicons.css";
+@use "./assets/scss/styles.scss";
+html,
+body {
+
+    margin: 0;
+
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+app-root {
+
+    display: block;
+
+    height: 100%;
+
+}

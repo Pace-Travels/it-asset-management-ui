@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            SCROLLBAR
+=========================================*/
+
+* {
+
+    @include scrollbar;
+
+}
+.page-wrapper{
+
+    @include scrollbar;
+
+}

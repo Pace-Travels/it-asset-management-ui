@@ -1,0 +1,98 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            GLOBAL
+=========================================*/
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+body {
+
+    font-family: $font-family;
+
+    font-size: $font-md;
+
+    font-weight: $fw-normal;
+
+    line-height: $line-height-base;
+
+    color: $text-primary;
+
+    background: $body-bg;
+
+    overflow: hidden;
+
+}
+
+app-root {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+h1 {
+
+    font-size: $font-4xl;
+
+    font-weight: $fw-bold;
+
+}
+
+h2 {
+
+    font-size: $font-3xl;
+
+    font-weight: $fw-bold;
+
+}
+
+h3 {
+
+    font-size: $font-2xl;
+
+    font-weight: $fw-semibold;
+
+}
+
+h4 {
+
+    font-size: $font-xl;
+
+    font-weight: $fw-semibold;
+
+}
+
+h5 {
+
+    font-size: $font-lg;
+
+    font-weight: $fw-medium;
+
+}
+
+h6 {
+
+    font-size: $font-md;
+
+    font-weight: $fw-medium;
+
+}
+
+p {
+
+    font-size: $font-md;
+
+    color: $text-secondary;
+
+}

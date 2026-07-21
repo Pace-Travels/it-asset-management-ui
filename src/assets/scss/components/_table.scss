@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            TABLE
+=========================================*/
+
+.table-responsive {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+.table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: $table-bg;
+
+}
+
+.table thead {
+
+    background: $datatable-header-bg;
+
+}
+
+.table th {
+
+    padding: $space-4;
+
+    font-size: $font-sm;
+
+    font-weight: $fw-semibold;
+
+    color: $text-primary;
+
+    text-align: left;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid $border-color;
+
+}
+
+.table td {
+
+    padding: $space-4;
+
+    font-size: $font-md;
+
+    color: $text-secondary;
+
+    border-bottom: 1px solid $border-light;
+
+    vertical-align: middle;
+
+}
+
+.table tbody tr {
+
+    transition: $transition-fast;
+
+}
+
+.table tbody tr:hover {
+
+    background: $datatable-hover;
+
+}
+
+.table-striped tbody tr:nth-child(even) {
+
+    background: $gray-50;
+
+}
+
+.table-borderless th,
+.table-borderless td {
+
+    border: none;
+
+}
+
+.status{
+
+    padding:4px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.status.active{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.status.repair{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.status.scrap{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+.table-actions{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+.status.available{
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+}

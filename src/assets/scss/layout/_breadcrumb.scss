@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+
+.breadcrumb{
+
+    height:48px;
+
+    background:#b6fff2;
+
+    border-bottom:1px solid #E2E8F0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    margin-top: 7px;
+
+}
+
+.page-title{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#0F172A;
+
+    margin-bottom:2px;
+
+}
+
+.breadcrumb-path{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    color:#64748B;
+
+}
+
+.breadcrumb-path i{
+
+    font-size:10px;
+
+}
+
+.active{
+
+    color:#2563EB;
+
+    font-weight:600;
+
+}
+
+.app-breadcrumb {
+
+    position: sticky;
+
+    top: 64px;
+
+    z-index: 999;
+
+}

@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+/*=========================================
+=            BADGE
+=========================================*/
+
+.badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 4px 10px;
+
+    border-radius: $badge-radius;
+
+    font-size: $badge-font-size;
+
+    font-weight: $fw-medium;
+
+}
+
+.badge-success {
+
+    background: $success-light;
+
+    color: $success-color;
+
+}
+
+.badge-danger {
+
+    background: $danger-light;
+
+    color: $danger-color;
+
+}
+
+.badge-warning {
+
+    background: $warning-light;
+
+    color: $warning-color;
+
+}
+
+.badge-info {
+
+    background: $info-light;
+
+    color: $info-color;
+
+}
+
+.badge-primary {
+
+    background: $primary-light;
+
+    color: $primary-color;
+
+}
