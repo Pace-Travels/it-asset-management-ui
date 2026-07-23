@@ -213,9 +213,11 @@
 
 .nav-link.active {
 
-    background: #2563EB;
+    background:rgba(59,130,246,.10);
 
-    color: #fff;
+    color:#2563EB;
+
+    font-weight:600;
 
 }
 
@@ -304,9 +306,9 @@
     }
 
     .sub-menu {
-
         display: none;
-
+        overflow: hidden;
+        animation: slideDown .25s ease;
     }
 
     .nav-link {
@@ -357,15 +359,17 @@
 
 .sub-link.active {
 
-    background: #1E40AF;
+    background:rgba(59,130,246,.08);
 
-    color: #fff;
+    color:#2563EB;
+
+    font-weight:600;
 
 }
 
-.sidebar{
+.sidebar {
 
-    transition:.30s ease;
+    transition: .30s ease;
 
 }
 
@@ -396,5 +400,32 @@
 
     margin: 0;
     font-size: 20px;
+
+}
+
+.nav-link .pi-angle-right,
+.nav-link .pi-angle-down {
+
+    transition: transform .25s ease;
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-6px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }

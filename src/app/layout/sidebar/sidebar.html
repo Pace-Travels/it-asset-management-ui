@@ -34,8 +34,7 @@
 
             <li class="nav-item">
 
-                <a class="nav-link" (click)="toggle(item)" [class.active]="activeMenu === item.label"
-                    (click)="setActive(item.label); toggle(item)">
+                <a class="nav-link" [class.active]="isParentActive(item)" (click)="onMenuClick(item)">
 
                     <i [class]="item.icon"></i>
 
@@ -66,8 +65,7 @@
 
                     <li>
 
-                        <a class="sub-link" [class.active]="activeMenu === child.label"
-                            (click)="setActive(child.label)">
+                        <a class="sub-link" [class.active]="activeMenu === child.label" (click)="onChildMenuClick(child)">
 
                             <i [class]="child.icon"></i>
 
