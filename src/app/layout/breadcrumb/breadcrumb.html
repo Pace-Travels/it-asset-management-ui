@@ -1,27 +1,45 @@
-<div class="breadcrumb" *ngIf="router.url !== '/dashboard'">
+@if ((breadcrumbs$ | async); as breadcrumbs) {
 
-    <div class="breadcrumb-left">
+@if (breadcrumbs.length > 0) {
 
-        <h4 class="page-title">
+<nav class="breadcrumb-container">
 
-            Dashboard
+    <ol>
 
-        </h4>
+        @for(item of breadcrumbs; track item.route; let last = $last){
 
-        <div class="breadcrumb-path">
+        <li>
 
-            <span>Home</span>
+            @if(!last){
+
+            <a [routerLink]="item.route">
+
+                {{item.label}}
+
+            </a>
 
             <i class="pi pi-angle-right"></i>
 
-            <span class="active">
+            }
 
-                Dashboard
+            @else{
+
+            <span>
+
+                {{item.label}}
 
             </span>
 
-        </div>
+            }
 
-    </div>
+        </li>
 
-</div>
+        }
+
+    </ol>
+
+</nav>
+
+}
+
+}

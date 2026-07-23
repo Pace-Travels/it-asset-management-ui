@@ -1,24 +1,27 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Observable } from 'rxjs';
+import { BreadcrumbService } from '../../core/services/breadcrumb-services';
 
 @Component({
   selector: 'app-breadcrumb',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './breadcrumb.html',
-  styleUrl: './breadcrumb.scss',
+  styleUrl: './breadcrumb.scss'
 })
 export class Breadcrumb {
 
-  constructor(public router: Router) { }
-  pageTitle = 'Dashboard';
+  breadcrumbs$: Observable<any>;
 
-  breadcrumbItems = [
+  constructor(private breadcrumbService: BreadcrumbService) {
 
-    'Home',
+    this.breadcrumbs$ = this.breadcrumbService.breadcrumbs$;
 
-    'Dashboard'
-
-  ];
+  }
 
 }

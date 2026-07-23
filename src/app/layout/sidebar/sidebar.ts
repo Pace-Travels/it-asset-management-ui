@@ -40,20 +40,31 @@ export class Sidebar implements OnInit {
   }
 
   private setActiveRoute(route: string): void {
+
+    // Sab parents close
+    this.menu.forEach(menu => {
+      menu.expanded = false;
+    });
+
     this.menu.forEach(parent => {
+
       if (parent.route === route) {
         this.activeMenu = parent.id;
       }
 
       if (parent.children) {
-        parent.children.forEach(child => {
-          if (child.route === route) {
-            this.activeMenu = child.id;
-            parent.expanded = true;
-          }
-        });
+
+        const child = parent.children.find(c => c.route === route);
+
+        if (child) {
+          this.activeMenu = child.id;
+          parent.expanded = true; // Sirf current parent open
+        }
+
       }
+
     });
+
   }
 
   isParentActive(item: MenuItem): boolean {
@@ -79,7 +90,7 @@ export class Sidebar implements OnInit {
       permission: 'DASHBOARD_VIEW'
     },
     {
-      id: 'masters', label: 'Masters', icon: 'pi pi-database', permission: 'MASTER_VIEW', expanded: true, children:
+      id: 'masters', label: 'Masters', icon: 'pi pi-database', permission: 'MASTER_VIEW', expanded: false, children:
         [
 
           { id: 'user-master', label: 'User Master', icon: 'pi pi-users', route: '/masters/users', permission: 'MASTER_USER' },
@@ -114,7 +125,21 @@ export class Sidebar implements OnInit {
   onMenuClick(item: MenuItem): void {
     this.setActive(item.id);
     if (item.children) {
-      this.toggle(item);
+
+      // Pehle sab close
+      this.menu.forEach(menu => {
+
+        if (menu.children) {
+          menu.expanded = false;
+        }
+
+      });
+
+      // Sirf current open
+      item.expanded = true;
+
+      this.setActive(item.id);
+
       return;
     }
     if (item.route) {
