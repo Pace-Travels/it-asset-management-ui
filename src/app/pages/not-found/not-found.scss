@@ -1,0 +1,135 @@
+@use "../../../assets/scss/abstracts" as *;
+
+/*=========================================
+=            ERROR PAGE
+=========================================*/
+
+.error-page {
+
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: $space-8;
+
+    background: $body-bg;
+
+}
+
+.error-card {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    background: $white;
+
+    border: 1px solid $border-light;
+
+    border-radius: $radius-xl;
+
+    box-shadow: $shadow-md;
+
+    padding: $space-10;
+
+    text-align: center;
+
+}
+
+.error-image {
+
+    margin-bottom: $space-6;
+
+}
+
+.error-image img {
+
+    width: 100%;
+
+    max-width: 260px;
+
+    height: auto;
+
+}
+
+.error-code {
+
+    margin: 0;
+
+    font-size: 72px;
+
+    font-weight: 700;
+
+    color: $primary-color;
+
+    line-height: 1;
+
+}
+
+.error-title {
+
+    margin-top: $space-4;
+
+    margin-bottom: $space-3;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    color: $text-primary;
+
+}
+
+.error-description {
+
+    max-width: 420px;
+
+    margin: 0 auto $space-8;
+
+    color: $text-secondary;
+
+    line-height: 1.7;
+
+}
+
+.error-card .primary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+@media (max-width: 768px) {
+
+    .error-card {
+
+        padding: $space-7;
+
+    }
+
+    .error-code {
+
+        font-size: 56px;
+
+    }
+
+    .error-title {
+
+        font-size: 24px;
+
+    }
+
+    .error-image img {
+
+        max-width: 200px;
+
+    }
+
+}

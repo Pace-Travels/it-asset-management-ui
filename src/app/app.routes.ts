@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login';
 import { MainLayout } from './layout/main-layout/main-layout';
 import { authGuard } from './core/guards/auth-guard';
+import { NotFound } from './pages/not-found/not-found';
+import { AccessDenied } from './pages/access-denied/access-denied';
 
 
 export const routes: Routes = [
@@ -39,6 +41,12 @@ export const routes: Routes = [
       },
       {
         path: 'asset-info', loadChildren: () => import('./pages/master/asset-info/assetInfo.routes').then((m) => m.ASSETINFO_ROUTE),
+      },
+      {
+        path:'access-denied', component:AccessDenied
+      },
+      {
+        path: "**", component:NotFound
       }
     ]
   },
