@@ -209,3 +209,30 @@
     color:#495057;
 
 }
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-size {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page-size span {
+    font-size: 14px;
+    color: #555;
+}
+
+.page-size select {
+    width: 70px;
+    height: 34px;
+    padding: 0 8px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}

@@ -20,30 +20,51 @@
 
     <div class="pagination-buttons">
 
+        <!-- Page Size -->
+
+        <div class="page-size">
+
+            <span>Show</span>
+
+            <select
+                [value]="pageSize"
+                (change)="onPageSizeChange($event)">
+
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+
+            </select>
+
+        </div>
+
+        <!-- Previous -->
+
         <button
-
             (click)="previous()"
-
-            [disabled]="pageNumber==1">
+            [disabled]="pageNumber == 1">
 
             <i class="pi pi-angle-left"></i>
 
         </button>
 
+        <!-- Current Page -->
+
         <span>
 
-            {{pageNumber}}
+            {{ pageNumber }}
 
             /
 
-            {{totalPages}}
+            {{ totalPages }}
 
         </span>
 
+        <!-- Next -->
+
         <button
-
             (click)="next()"
-
             [disabled]="pageNumber >= totalPages">
 
             <i class="pi pi-angle-right"></i>

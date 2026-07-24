@@ -61,7 +61,7 @@ export class AssetInfoStatusList implements OnInit {
         next: (response) => {
 
           console.log('Current Page:', response.pagination.currentPage);
-console.table(response.data);
+          console.table(response.data);
           this.tableData = [...response.data];
 
           console.log(this.tableData);
@@ -236,6 +236,16 @@ console.table(response.data);
     }
 
     this.pageNumber = page;
+
+    this.getAssetInfoStatusList();
+
+  }
+
+  onPageSizeChange(size: number): void {
+
+    this.pageSize = size;
+
+    this.pageNumber = 1;
 
     this.getAssetInfoStatusList();
 

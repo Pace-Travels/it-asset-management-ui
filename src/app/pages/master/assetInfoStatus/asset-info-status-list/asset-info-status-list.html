@@ -69,7 +69,7 @@
     }
 
     <app-pagination [pageNumber]="pageNumber" [pageSize]="pageSize" [totalPages]="totalPages"
-        [totalRecords]="totalRecords" (pageChange)="onPageChange($event)">
+        [totalRecords]="totalRecords" (pageChange)="onPageChange($event)" (pageSizeChange)="onPageSizeChange($event)">
     </app-pagination>
 
 </div>
