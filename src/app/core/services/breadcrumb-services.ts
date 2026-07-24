@@ -153,18 +153,18 @@ export class BreadcrumbService {
       children: [
 
         {
-          label: 'User Master',
-          route: '/masters/users'
+          label: 'Asset-Info Status',
+          route: '/asset-info-status'
         },
 
         {
-          label: 'Department',
-          route: '/masters/departments'
+          label: 'Add New Asset Info Status',
+          route: '/asset-info-status/add'
         },
 
         {
-          label: 'Location',
-          route: '/masters/location'
+          label: 'Edit Asset Info Status',
+          route: '/asset-info-status/update/:id'
         },
 
         {

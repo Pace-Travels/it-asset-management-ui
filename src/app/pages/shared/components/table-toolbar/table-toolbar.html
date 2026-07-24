@@ -1,15 +1,20 @@
 <div class="table-toolbar">
 
+    @if(enableSearch){
+
     <div class="search-box">
 
         <i class="pi pi-search"></i>
 
-        <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="onSearch()"
-            placeholder="Search..." />
+        <input type="text" [(ngModel)]="searchText" (input)="onSearch()" placeholder="Search..." />
 
     </div>
 
-    <button class="secondary-btn" type="button" (click)="openFilter()">
+    }
+
+    @if(enableFilter){
+
+    <button class="secondary-btn" (click)="filter.emit()">
 
         <i class="pi pi-filter"></i>
 
@@ -17,14 +22,10 @@
 
     </button>
 
+    }
+
 </div>
 
-<app-filter-modal
-
-    [(visible)]="showFilterDialog"
-
-    (apply)="applyFilter($event)"
-
-    (reset)="resetFilter()">
+<app-filter-modal [(visible)]="showFilterDialog" (apply)="applyFilter($event)" (reset)="resetFilter()">
 
 </app-filter-modal>

@@ -4,11 +4,12 @@ import { Sidebar } from '../sidebar/sidebar';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from '../footer/footer';
 import { Breadcrumb } from '../breadcrumb/breadcrumb';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [Header, Sidebar, RouterOutlet, Footer, Breadcrumb],
+  imports: [Header, Sidebar, RouterOutlet, Footer, Breadcrumb, ToastModule],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })

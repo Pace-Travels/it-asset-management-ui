@@ -1,0 +1,55 @@
+<div class="table-pagination">
+
+    <div class="pagination-info">
+
+        Showing
+
+        {{ startRecord }}
+
+        -
+
+        {{ endRecord }}
+
+        of
+
+        {{ totalRecords }}
+
+        Records
+
+    </div>
+
+    <div class="pagination-buttons">
+
+        <button
+
+            (click)="previous()"
+
+            [disabled]="pageNumber==1">
+
+            <i class="pi pi-angle-left"></i>
+
+        </button>
+
+        <span>
+
+            {{pageNumber}}
+
+            /
+
+            {{totalPages}}
+
+        </span>
+
+        <button
+
+            (click)="next()"
+
+            [disabled]="pageNumber >= totalPages">
+
+            <i class="pi pi-angle-right"></i>
+
+        </button>
+
+    </div>
+
+</div>

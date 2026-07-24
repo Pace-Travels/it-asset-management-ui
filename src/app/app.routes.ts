@@ -43,6 +43,9 @@ export const routes: Routes = [
         path: 'asset-info', loadChildren: () => import('./pages/master/asset-info/assetInfo.routes').then((m) => m.ASSETINFO_ROUTE),
       },
       {
+        path: 'asset-info-status', loadChildren: () => import('./pages/master/assetInfoStatus/assetInfoStatus.routes').then((m) => m.ASSET_INFO_STATUS)
+      },
+      {
         path:'access-denied', component:AccessDenied
       },
       {

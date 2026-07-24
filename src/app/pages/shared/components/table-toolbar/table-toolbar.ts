@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FilterModal } from '../filter-modal/filter-modal';
 
@@ -12,7 +12,25 @@ export class TableToolbar {
 
   searchText = '';
 
+  @Input() enableSearch = true;
+
+  @Input() enableFilter = true;
+
+  @Input() enableAdd = false;
+
+  @Input() enableRefresh = false;
+
+  @Input() enableExport = false;
+
   @Output() search = new EventEmitter<string>();
+
+  @Output() add = new EventEmitter<void>();
+
+  @Output() filter = new EventEmitter<void>();
+
+  @Output() refresh = new EventEmitter<void>();
+
+  @Output() export = new EventEmitter<void>();
 
   onSearch() {
     this.search.emit(this.searchText);

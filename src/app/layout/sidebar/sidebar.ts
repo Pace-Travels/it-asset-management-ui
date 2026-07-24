@@ -48,17 +48,26 @@ export class Sidebar implements OnInit {
 
     this.menu.forEach(parent => {
 
-      if (parent.route === route) {
+      // Parent Route
+      if (parent.route && route.startsWith(parent.route)) {
+
         this.activeMenu = parent.id;
+
       }
 
+      // Child Route
       if (parent.children) {
 
-        const child = parent.children.find(c => c.route === route);
+        const child = parent.children.find(c =>
+          c.route && route.startsWith(c.route)
+        );
 
         if (child) {
+
           this.activeMenu = child.id;
-          parent.expanded = true; // Sirf current parent open
+
+          parent.expanded = true;
+
         }
 
       }
@@ -93,7 +102,7 @@ export class Sidebar implements OnInit {
       id: 'masters', label: 'Masters', icon: 'pi pi-database', permission: 'MASTER_VIEW', expanded: false, children:
         [
 
-          { id: 'user-master', label: 'User Master', icon: 'pi pi-users', route: '/masters/users', permission: 'MASTER_USER' },
+          { id: 'asset-info-status', label: 'Asset Info Status', icon: 'pi pi-users', route: '/asset-info-status', permission: 'MASTER_USER' },
           { id: 'department', label: 'Department', icon: 'pi pi-building', route: '/masters/departments', permission: 'MASTER_DEPARTMENT' },
           { id: 'location', label: 'Location', icon: 'pi pi-map-marker', route: '/masters/location', permission: 'MASTER_LOCATION' },
           { id: 'asset-type', label: 'Asset Type', icon: 'pi pi-box', route: '/masters/asset-type', permission: 'MASTER_ASSET_TYPE' },
